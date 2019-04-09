@@ -99,7 +99,7 @@ longer than 4x, so I would recommend 8x difference for production systems.
 
 ### Programming
 
-I had a make a few changes in the message format and optimise the ISR callback
+I had to make a few changes in the message format and optimise the ISR callback
 on slave because I was noticing that there are some ASCII 7 (BELL) characters
 being sent.
 
