@@ -21,7 +21,7 @@ support 5v logic on SPI pins, or ATmega328 i.e. UNO's microcontroller can run
 properly at 3.3v supply. I have noticed that ATmega328 SPI starts misbehaving
 at lower voltages in the past.
 
-And, because of this, I decided to install a ATmega328P microcontroller with a
+And, because of this, I decided to install an ATmega328P microcontroller with a
 SPI to Serial Console proxy with following parameters:
 
 1. 5v Power Supply
@@ -127,6 +127,13 @@ void setup (void) {
   SPSR |= _BV(SPI2X);
 
   process_it = false;
+
+  // Startup message
+  // This will help detect restarts
+  Serial.println(h1_sep);
+  Serial.println(" Echo Chamber");
+  Serial.println(" Started!");
+  Serial.println(h1_sep);
 }
 
 
